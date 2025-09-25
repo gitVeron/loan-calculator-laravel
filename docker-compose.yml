@@ -1,0 +1,11 @@
+services:
+  app:
+    image: webdevops/php-apache:8.2  # Альтернативный образ
+    container_name: loan-calculator
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "8000:80"
+    environment:
+      - WEB_DOCUMENT_ROOT=/app/public
